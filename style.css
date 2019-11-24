@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5% 10%;
+  font-family: 'Montserrat', sans-serif;
+  background: #f5f5f5;
+}
+.feed {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 33rem;
+  grid-gap: 1rem;
+  margin: 4rem 0 4rem 0;
+}
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: cover;
+  object-fit: cover;
+  border-radius: .8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8rem;
+  transition: all .3s ease;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
+  transform: scale(1.02);
+}
+.card__category {
+  font-size: 1.8rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: rgb(233, 238, 243);
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0px 30px 18px -8px rgba(0,0,0,0.1);
+
+}
+.card__title {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  margin: 0.8rem 0 0 0;
+  color: #f5f5f5;
+}
+.card:nth-child(1) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/travel.jpg)
+}
+.card:nth-child(2) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/music.jpg)
+}
+.card:nth-child(3) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/science.jpg)
+}
+.card:nth-child(4) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/politics.jpg)
+}
+.card:nth-child(5) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/sport.jpg)
+}
+.card:nth-child(6) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/food.jpg)
+}
+.card:nth-child(7) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/tech.jpg)
+}
+.card:nth-child(8) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/arts.jpg)
+}
+.card:nth-child(9) {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0) 0%,
+    rgba(10,10,10,0) 50%,
+    rgba(71, 38, 38, 0.7) 100% ),
+    url(img/arch.jpg)
+}
+.card:nth-child(1),:nth-child(6),:nth-child(7) {
+  grid-column-start: span 6;
+}
+.card:nth-child(2),:nth-child(3),
+:nth-child(4),:nth-child(5),:nth-child(8),:nth-child(9) {
+  grid-column-start: span 3;
+}
+
+@media screen and (max-width:1200px) {
+  .card:nth-child(n) {
+    grid-column-start: span 6;
+  }
+}
+@media screen and (max-width:800px) {
+ .card:nth-child(n) {
+    grid-column-start: span 12;
+  }
+}

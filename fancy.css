@@ -1,0 +1,26 @@
+body {
+  background: #b5cfec;
+}
+.fancy-homepage {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+}
+
+.title {
+  grid-row: 3 / 8;
+  grid-column: 2 / 9;
+}
+
+.toolbar {
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+}
+.panel {
+  grid-row: 3 / -1; /* to leave an empty row between the toolbar and the panel */
+  grid-column: 10 / -1; /* the width-middle of the screen is 12 */
+}
+.caroussel {
+  grid-row: 9 / -1; /* the height-middle of the screen is 7 */
+  grid-column: 1 / -1;
+}
